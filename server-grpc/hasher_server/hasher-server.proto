@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = ".;hasher_server";
+
+package hasher_server;
+
+service Hasher {
+  rpc Hash(HashRequest) returns (HashResponse) {}
+}
+
+message HashRequest {
+  string Input = 1;
+}
+
+message HashResponse {
+  string Output = 1;
+}
